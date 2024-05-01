@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/cadastrar_artilheiros.js" defer></script>
+    <script src="./assets/js/artilheiros.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="d-flex flex-column align-items-center">
+        <a href="index.html">
+            <img src="./assets/images/copa_america.png" alt="logotipo_copa_america">
+        </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TABELA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artilheiros.html">ARTILHEIRO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ASSISTÊNCIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">GOLEIROS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalExemplo">Cadastrar</button>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastre um novo artilheiro</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate>
+                    <div class="form-group row">
+                        <label for="imagem" class="col-sm-4 col-form-label text-right form-label">Link da Foto</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="imagem" class="nes-input" required>
+                        </div>
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                          </div>
+                    </div>
+                    <div class="form-group row">                      
+                        <label for="nome" class="col-sm-4 col-form-label text-right">Nome</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="nome" class="nes-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descricao" class="col-sm-4 col-form-label text-right">Seleção</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="descricao" class="nes-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="gols" class="col-sm-4 col-form-label text-right">Gols</label>
+                        <div class="col-sm-8">
+                            <input type="number" id="gols" class="nes-input" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+              <button type="submit" id="botao-cadastrar" class="btn btn-success">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <header>       
+    </header>
+    
+    <section>  
+        <div class="container mt-3">
+            <div id="listaDejogadores"></div>
+    </section>   
+    
+</body>
+</html>

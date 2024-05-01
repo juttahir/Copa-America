@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/background.jpg);  
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    z-index: -10;
+}
+
+.logo img{
+    margin-top: 7rem;
+    max-width: 20%;
+    transition: 1s;
+}
+
+.logo img:hover{
+    margin-top: 6.8rem;
+    max-width: 20.5%;
+    filter: brightness(1.2);
+}
+
+.nav-item {
+    margin-right: 40px;
+}
+
+nav ul li a{
+    color: #cdcdcd;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    filter: brightness(1.2);  
+}
+
+.card-body img{
+    max-width: 100px;
+}
+
+#listaDeJogadores{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
+}
