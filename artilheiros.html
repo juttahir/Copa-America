@@ -54,40 +54,56 @@
             <div class="modal-body">
                 <form class="needs-validation" novalidate>
                     <div class="form-group row">
-                        <label for="imagem" class="col-sm-4 col-form-label text-right form-label">Link da Foto</label>
+                        <label for="imagem" class="col-sm-4 col-form-label text-right">Link da Foto</label>
                         <div class="col-sm-8">
-                            <input type="text" id="imagem" class="nes-input" required>
+                            <input type="text" id="imagem" class="form-control" placeholder="http://" required>
+                            <div class="invalid-tooltip">
+                                Insira um link com a imagem do jogador.
+                            </div>
                         </div>
-                        <div class="invalid-tooltip">
-                            Please provide a valid city.
-                          </div>
-                    </div>
+                    </div>                    
                     <div class="form-group row">                      
                         <label for="nome" class="col-sm-4 col-form-label text-right">Nome</label>
                         <div class="col-sm-8">
-                            <input type="text" id="nome" class="nes-input" required>
+                            <input type="text" id="nome" class="form-control" placeholder="Jogador" required>
+                            <div class="invalid-tooltip">
+                                Insira o nome do jogador.
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="descricao" class="col-sm-4 col-form-label text-right">Seleção</label>
                         <div class="col-sm-8">
-                            <input type="text" id="descricao" class="nes-input" required>
+                            <input type="text" id="descricao" class="form-control" placeholder="Brasil" required>
+                            <div class="invalid-tooltip">
+                                Insira a seleção do jogador.
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="gols" class="col-sm-4 col-form-label text-right">Gols</label>
                         <div class="col-sm-8">
-                            <input type="number" id="gols" class="nes-input" required>
+                            <input type="number" id="gols" class="form-control" placeholder="12" required>
+                            <div class="invalid-tooltip">
+                                Insira número de gols do jogador.
+                            </div>
                         </div>
                     </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                      <button type="submit" id="botao-cadastrar" class="btn btn-success">Cadastrar</button>
+                    </div>
                 </form>
+                <div class="alert alert-success alert-dismissible fade show" id="alerta" role="alert" style="display: none;">
+                    Jogador cadastrado com sucesso!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  
             </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-              <button type="submit" id="botao-cadastrar" class="btn btn-success">Cadastrar</button>
-            </div>
-          </div>
         </div>
+    </div>
       </div>
 
     <header>       

@@ -16,13 +16,13 @@ header::before{
 }
 
 .logo img{
-    margin-top: 7rem;
+    margin-top: 2%;
     max-width: 20%;
     transition: 1s;
 }
 
 .logo img:hover{
-    margin-top: 6.8rem;
+    margin-top: 3%;
     max-width: 20.5%;
     filter: brightness(1.2);
 }
@@ -33,6 +33,7 @@ header::before{
 
 nav ul li a{
     color: #cdcdcd;
+    text-shadow: black 0.1em 0.1em 0.2em;
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 700;
     font-style: bold;
