@@ -1,21 +1,21 @@
-const artilheiros = JSON.parse(localStorage.getItem("artilheiros")) || []
+const jogadores = JSON.parse(localStorage.getItem("jogadores")) || []
 
-artilheiros.forEach( artilheiro => card(artilheiro) )
+jogadores.forEach( jogador => card(jogador) )
 
-function card(artilheiro){
+function card(jogador){
 
     const content = `
         <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="${artilheiro.imagem}" class="rounded float-left" alt="...">
-                            <h5 class="card-title d-flex justify-content-center">${artilheiro.nome}</h5>
-                            <p class="card-text d-flex justify-content-center">${artilheiro.descricao}</p>
+                            <img src="${jogador.imagem}" class="rounded float-left" alt="...">
+                            <h5 class="card-title d-flex justify-content-center">${jogador.nome}</h5>
+                            <p class="card-text d-flex justify-content-center">${jogador.descricao}</p>
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="badge bg-warning">
                                     <i class="nes-icon coin is-small"></i>
-                                    <span>${artilheiro.gols} Gols</span>
+                                    <span>${jogador.assistencia} Assistencias</span>
                                 </div>
                             </div>
                         </div>
@@ -28,6 +28,6 @@ function card(artilheiro){
         card.innerHTML = content
 
     document
-        .querySelector("#listaDeArtilheiros")
+        .querySelector("#listaDejogadores")
         .appendChild(card);
 }

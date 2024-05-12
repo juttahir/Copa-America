@@ -1,0 +1,29 @@
+document
+    .querySelector("#botao-cadastrar")
+    .addEventListener("click", (event) => {
+        event.preventDefault()
+
+        const form = document.querySelector("form")
+
+        const goleiro = {
+            imagem: form.imagem.value,
+            nome: form.nome.value,
+            descricao: form.descricao.value,
+            defesas: form.defesas.value
+        }
+
+        console.log(form.nome.value)
+
+        if(goleiro.imagem && goleiro.nome && goleiro.descricao && goleiro.defesas){
+            console.log("Funcionou")
+            salvar(goleiro)
+        }
+    })
+
+function salvar(goleiro){
+    const goleiros = JSON.parse(localStorage.getItem("goleiros")) || []
+    goleiros.push(goleiro)
+    localStorage.setItem("goleiros", JSON.stringify(goleiros))
+
+    window.location = "goleiros.html"
+}

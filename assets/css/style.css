@@ -2,13 +2,14 @@
 
 header::before{
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-image: url(../images/background.jpg);  
     background-size: cover;
     background-repeat: no-repeat, repeat;
     background-position: center center;
+    background-attachment: fixed;
     width: 100vw;
     height: 100vh;
     display: block;
@@ -16,13 +17,13 @@ header::before{
 }
 
 .logo img{
-    margin-top: 2%;
+    margin-top: 7rem;
     max-width: 20%;
     transition: 1s;
 }
 
 .logo img:hover{
-    margin-top: 3%;
+    margin-top: 6.8rem;
     max-width: 20.5%;
     filter: brightness(1.2);
 }
@@ -33,7 +34,6 @@ header::before{
 
 nav ul li a{
     color: #cdcdcd;
-    text-shadow: black 0.1em 0.1em 0.2em;
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 700;
     font-style: bold;
@@ -52,4 +52,21 @@ nav ul li a:hover{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.2rem;
+}
+
+.table{
+    color: white;
+}
+
+.tabela{    
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    color: #cdcdcd;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    box-shadow: 1rem;
+}
+
+.table img{
+    margin-top: 0rem;
+    margin-right: 1rem;
 }
